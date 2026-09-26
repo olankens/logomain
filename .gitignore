@@ -10,7 +10,7 @@ package-lock.json
 pnpm-lock.yaml
 
 # Project
-source/raw/
+source/_raw/
 
 # Vscode
 .vscode/

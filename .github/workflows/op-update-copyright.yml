@@ -1,4 +1,4 @@
-name: "📙 : Bump Copyright"
+name: "📙 : Update Copyright"
 on:
   schedule:
     - cron: "0 0 1 1 *"
@@ -16,7 +16,7 @@ jobs:
             const fs = require("node:fs");
             const year = new Date().getFullYear();
             let content = fs.readFileSync("LICENSE.md", "utf8");
-            const pattern = /(Copyright\s+\(c\)\s+)(\d{4})(-\d{4})?/;
+            const pattern = /(Copyright\\s+\\(c\\)\\s+)(\\d{4})(-\\d{4})?/;
             content = content.replace(pattern, (_, prefix, start, end) => {
               const startYear = Number(start);
               const endYear = end ? Number(end) : null;
@@ -28,5 +28,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add LICENSE.md
-          git diff --staged --quiet || git commit -m "chore: bump all project copyright notices to reflect the year $(date +%Y)"
+          git diff --staged --quiet || git commit -m "chore: update copyright year in the project license file to $(date +%Y)"
           git push

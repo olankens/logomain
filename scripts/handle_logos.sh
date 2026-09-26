@@ -1,12 +1,12 @@
 #!/bin/bash
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-SRC="$DIR/../source/raw"
+SRC="$DIR/../source/_raw"
 
 # Create source/raw directory
 mkdir -p "$SRC"
 
-# Ensure source/raw is not empty
+# Ensure source/_raw is not empty
 [[ -z "$(ls -A "$SRC" 2>/dev/null)" ]] && exit 1
 
 # Handle svg images
