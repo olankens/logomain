@@ -226,7 +226,7 @@ done
 ### GENERATE THE SPLITTER
 
 ```sh
-magick -size 10x10 xc:"#646464" ".assets/splitter.gif"
+magick -size 10x400 xc:"#646464" ".assets/splitter.gif"
 ```
 
 ### CREATE THE BANNER
