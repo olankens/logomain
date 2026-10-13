@@ -3,7 +3,7 @@
 DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC="$DIR/../source"
 RME="$DIR/../README.md"
-MAX=5
+MAX=6
 
 # Create table
 out="<!-- START_TABLE -->\n<table>\n" && i=0
